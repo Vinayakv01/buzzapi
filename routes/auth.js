@@ -87,12 +87,12 @@ router.get('/check-auth', (req, res) => {
         res.status(401).json({ authenticated: false });
       } else {
         console.log(`${userType} authenticated:`, decoded);
-        
+
         const userId = decoded.id;
         const query = `SELECT u.*, r.name as role_name FROM user u 
                        LEFT JOIN role r ON u.role_id = r.id 
                        WHERE u.id = ?`;
-        
+
         db.query(query, [userId], (error, results) => {
           if (error) {
             console.error('Error fetching user from database:', error);

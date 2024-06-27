@@ -1,5 +1,3 @@
-// routes/logout.js (backend)
-
 const express = require('express');
 const router = express.Router();
 

@@ -28,7 +28,7 @@
 
 
 const jwt = require('jsonwebtoken');
-const mysql = require('mysql2/promise'); // Assuming you're using mysql2 for database connection
+const mysql = require('mysql2/promise');
 
 // Create a pool to manage multiple connections
 const pool = mysql.createPool({
